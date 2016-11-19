@@ -26,5 +26,5 @@ funciton connect_to_datalab() {
     --ssh-flag="-N" \
     --ssh-flag="-L" \
     --ssh-flag="localhost:8081:localhost:8899" \
-    gke-infra-default-pool-fde716O73-dao3
+    gke-infra-default-pool-fde71673-dao3
 }
