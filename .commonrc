@@ -12,3 +12,19 @@ function td() {
 ########################################
 
 alias gst="git status"
+
+########################################
+#               gCloud                 #
+########################################
+
+############# Shortcuts/Hacks #########
+
+funciton connect_to_datalab() {
+  gcloud compute ssh --quiet \
+    --project "b0noi-infrastructure" \
+    --zone "us-central1-f" \
+    --ssh-flag="-N" \
+    --ssh-flag="-L" \
+    --ssh-flag="localhost:8081:localhost:8899" \
+    gke-infra-default-pool-fde716O73-dao3
+}
