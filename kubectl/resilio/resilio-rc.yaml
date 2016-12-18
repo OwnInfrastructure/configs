@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: resilio-rc
+  labels:
+    server: prod
+    app: resilio-rc
+spec:
+  replicas: 1
+  selector:
+    server: prod
+    app: resilio
+  template:
+    metadata:
+      labels:
+        server: prod
+        app: resilio
+    spec:
+      containers:
+        - name: resilio
+          image: resilio/sync
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8888
+              hostPort: 8887
+            - containerPort: 7777
+              hostPort: 7777
+          volumeMounts:
+            - name: resilio-disk
+              mountPath: /mnt/sync
+      volumes:
+        - name: resilio-disk
+          gcePersistentDisk:
+            pdName: resilio
+            fsType: ext4
