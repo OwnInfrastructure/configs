@@ -23,8 +23,8 @@ spec:
           ports:
             - containerPort: 8888
               hostPort: 8887
-            - containerPort: 7777
-              hostPort: 7777
+            - containerPort: 5555
+              hostPort: 5555
           volumeMounts:
             - name: resilio-disk
               mountPath: /mnt/sync
