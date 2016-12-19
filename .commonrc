@@ -19,6 +19,15 @@ alias gst="git status"
 
 ############# Shortcuts/Hacks #########
 
+
+function gproject() {
+  gcloud config set project $1
+}
+
+function gprojects() {
+  gcloud projects list
+}
+
 funciton connect_to_datalab() {
   gcloud compute ssh --quiet \
     --project "b0noi-infrastructure" \
