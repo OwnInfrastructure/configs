@@ -33,6 +33,14 @@ function gprojects() {
   gcloud projects list
 }
 
+############ Kubectl ##################
+
+alias kpods="kubectl get pods"
+
+alias kservices="kubectl get services"
+
+alias krc="kubectl get rc"
+
 ############# Hacks ###################
 
 funciton connect_to_datalab() {
