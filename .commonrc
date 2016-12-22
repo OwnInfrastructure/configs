@@ -11,7 +11,7 @@ function td() {
 #               Bazel                  #
 ########################################
 
-alias bb="bazel buil"
+alias bb="bazel build"
 
 ########################################
 #                 git                  #
