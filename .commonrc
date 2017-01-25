@@ -7,6 +7,10 @@ function td() {
   cd $1
 }
 
+function sort_subfolders_by_size() {
+  du --max-depth=1 $1 | sort -n -r
+}
+
 ########################################
 #               Bazel                  #
 ########################################
