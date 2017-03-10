@@ -15,6 +15,10 @@ function replace_string_in_dir() {
   find $1 -type f -name "*" -exec sed -i 's/$2/$3/g' {} +
 }
 
+funciton process_by_port() {
+  netstat -tulpn | grep $1
+}
+
 ########################################
 #               Bazel                  #
 ########################################
