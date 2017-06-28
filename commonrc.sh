@@ -35,6 +35,15 @@ alias br="bazel run"
 
 alias gst="git status"
 
+function new_branch() {
+  git checkout master
+  git pull
+  git fetch upstream
+  git merge upstream/master
+  git push
+  git checkout -b $1
+}
+
 ########################################
 #               gCloud                 #
 ########################################
