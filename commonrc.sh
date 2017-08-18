@@ -35,6 +35,8 @@ alias br="bazel run"
 #                Conda                 #
 ########################################
 
+alias list_envs="conda info --envs"
+
 function remove_conda_env() {
    conda remove --name $1 --all
 }
