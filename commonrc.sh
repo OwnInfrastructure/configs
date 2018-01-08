@@ -41,6 +41,10 @@ function stop_instance() {
   aws ec2 stop-instances --instance-ids $1 --output text
 }
 
+function terminate_instance() {
+  aws ec2 terminate-instances --instance-ids $1 --output text
+}
+
 ########################################
 #               Bazel                  #
 ########################################
