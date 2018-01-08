@@ -37,6 +37,10 @@ function describe_instances() {
   aws ec2 describe-instances --query 'Reservations[*].Instances[*].{name:Tags[0].Value,id:InstanceId,type:InstanceType,ip:PublicIpAddress,state:State.Name,image_id:ImageId,launch_time:LaunchTime}' --output table
 }
 
+function stop_instance() {
+  aws ec2 stop-instances --instance-ids $1 --output text
+}
+
 ########################################
 #               Bazel                  #
 ########################################
