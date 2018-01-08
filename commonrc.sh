@@ -22,6 +22,18 @@ funciton process_by_port() {
 }
 
 ########################################
+#                AWS                   #
+########################################
+
+function change_region_to() {
+  export AWS_DEFAULT_REGION=$1
+}
+
+function change_region_to_default() {
+  export AWS_DEFAULT_REGION=us-east-1
+}
+
+########################################
 #               Bazel                  #
 ########################################
 
