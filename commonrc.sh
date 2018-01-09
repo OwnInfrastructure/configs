@@ -45,6 +45,10 @@ function terminate_instance() {
   aws ec2 terminate-instances --instance-ids $1 --output text
 }
 
+function set_instance_name() {
+  aws ec2 create-tags --resources $1 --tags Key=Name,Value="$2"
+}
+
 ########################################
 #               Bazel                  #
 ########################################
