@@ -23,6 +23,11 @@ function f() { find ./ -name "*.*" | xargs grep -ir "$@*";} #  search for keywor
 function ff() { find ./ -type f -name "$@*";}    # search for a file   e.g:  sf readme
 function fd() { find ./ -type d -name "$@*";}  # search for a directory  e.g.: sd nova 
 
+alias ..="cd ../.."
+alias .3="cd ../../../"
+alias .4="cd ../../../../"
+alias .5="cd ../../../../../" 
+
 ########################################
 #                AWS                   #
 ########################################
