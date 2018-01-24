@@ -2,8 +2,6 @@
 #               common                 #
 ########################################
 
-alias ff="find . | grep"
-
 function td() {
   mkdir $1
   cd $1
@@ -17,9 +15,13 @@ function replace_string_in_dir() {
   find $1 -type f -name "*" -exec sed -i 's/$2/$3/g' {} +
 }
 
-funciton process_by_port() {
+function process_by_port() {
   netstat -tulpn | grep $1
 }
+
+function f() { find ./ -name "*.*" | xargs grep -ir "$@*";} #  search for keyword e.g:  s slava
+function ff() { find ./ -type f -name "$@*";}    # search for a file   e.g:  sf readme
+function fd() { find ./ -type d -name "$@*";}  # search for a directory  e.g.: sd nova 
 
 ########################################
 #                AWS                   #
