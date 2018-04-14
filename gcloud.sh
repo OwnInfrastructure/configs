@@ -14,3 +14,11 @@ alias list_projects="gcloud projects list"
 funciton set_project() {
 	gcloud config set project $1
 }
+
+funciton set_zone() {
+	gcloud config set compute/zone $1
+}
+
+funciton set_region() {
+	gcloud config set compute/region $1
+}
