@@ -5,3 +5,7 @@ function list_regions() {
 
 alias current_project="gcloud config get-value project"
 alias list_projects="gcloud projects list"
+
+funciton set_project() {
+	gcloud config set project $1
+}
