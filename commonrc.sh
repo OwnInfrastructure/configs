@@ -97,26 +97,6 @@ function new_branch() {
   git checkout -b $1
 }
 
-########################################
-#               gCloud                 #
-########################################
-
-function gssh() {
-  gcloud compute ssh $1
-}
-
-function ginstances() {
-  gcloud compute instances list
-}
-
-function gproject() {
-  gcloud config set project $1
-}
-
-function gprojects() {
-  gcloud projects list
-}
-
 ############ Kubectl ##################
 
 alias kpods="kubectl get pods"

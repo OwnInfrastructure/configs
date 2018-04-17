@@ -1,9 +1,9 @@
-function list_regions() {
+function gregions() {
 	REGIONS=$(gcloud compute regions list)
 	echo $REGIONS | cut -d " " -f 1 | tail -n +2
 }
 
-function list_zones() {
+function gzones() {
 	ZONES=$(gcloud compute zones list)
 	echo $ZONES | cut -d " " -f 1 | tail -n +2
 }
@@ -21,4 +21,20 @@ funciton set_zone() {
 
 funciton set_region() {
 	gcloud config set compute/region $1
+}
+
+function gssh() {
+  gcloud compute ssh $1
+}
+
+function ginstances() {
+  gcloud compute instances list
+}
+
+function gproject() {
+  gcloud config set project $1
+}
+
+function gprojects() {
+  gcloud projects list
 }
