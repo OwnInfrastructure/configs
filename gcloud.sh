@@ -1,3 +1,8 @@
+function allow_http_ports() {
+  allow_port 80
+  allow_port 443
+}
+
 function allow_port() {
   gcloud compute firewall-rules create allow-port-$1 --allow tcp:$1
 }
