@@ -1,3 +1,7 @@
+function allow_port() {
+  gcloud compute firewall-rules create allow-port-$1 --allow tcp:$1
+}
+
 function gregions() {
 	REGIONS=$(gcloud compute regions list)
 	echo $REGIONS | cut -d " " -f 1 | tail -n +2
