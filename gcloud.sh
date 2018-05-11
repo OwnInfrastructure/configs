@@ -47,3 +47,7 @@ function gproject() {
 function gprojects() {
   gcloud projects list
 }
+
+function ginstance_delete() {
+  gcloud compute instances delete --quiet $1
+}
