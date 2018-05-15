@@ -30,7 +30,7 @@ function set_region() {
   gcloud config set compute/region $1
 }
 
-# Compute
+## Compute
 
 function allow_http_ports() {
   allow_port 80
