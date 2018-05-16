@@ -42,7 +42,7 @@ function allow_port() {
 }
 
 function gssh() {
-  gcloud compute ssh $1
+  gcloud compute ssh $@
 }
 
 function ginstances() {
