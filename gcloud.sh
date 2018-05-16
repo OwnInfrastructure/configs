@@ -52,3 +52,12 @@ function ginstances() {
 function ginstance_delete() {
   gcloud compute instances delete --quiet $1
 }
+
+function ginstance_stop() {
+  gcloud compute instances stop --quiet $1
+}
+
+function ginstance_start() {
+  gcloud compute instances start --quiet $1
+}
+
