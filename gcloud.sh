@@ -61,3 +61,8 @@ function ginstance_start() {
   gcloud compute instances start --quiet $@
 }
 
+## Composer
+
+function composer_run() {
+  gcloud beta composer environments run $1 --location=us-central1 $2 -- $@
+}
