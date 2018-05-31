@@ -64,5 +64,5 @@ function ginstance_start() {
 ## Composer
 
 function composer_run() {
-  gcloud beta composer environments run $1 --location=us-central1 $2 -- $@
+  gcloud beta composer environments run $1 --location=us-central1 $2 -- $3
 }
