@@ -61,6 +61,10 @@ function ginstance_start() {
   gcloud compute instances start --quiet $@
 }
 
+function ginstance_describe() {
+  gcloud compute instances describe $@
+}
+
 ## Composer
 
 function composer_run() {
