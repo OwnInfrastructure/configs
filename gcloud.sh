@@ -65,6 +65,10 @@ function ginstance_describe() {
   gcloud compute instances describe $@
 }
 
+function ginstance_serial_logs() {
+  gcloud compute instances get-serial-port-output $@
+}
+
 ## Composer
 
 function composer_run() {
