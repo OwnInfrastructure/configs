@@ -45,6 +45,10 @@ function gssh() {
   gcloud compute ssh $@
 }
 
+function gssh_8080() {
+  gssh $1 -- -L 8080:localhost:8080
+}
+
 function ginstances() {
   gcloud compute instances list
 }
