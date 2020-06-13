@@ -38,3 +38,7 @@ function gproject() {
 function gprojects() {
   gcloud projects list
 }
+
+funciton make_public() {
+ gsutil acl ch -u AllUsers:R $1
+}
