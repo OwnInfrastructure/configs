@@ -79,6 +79,6 @@ function composer_run() {
   gcloud beta composer environments run $1 --location=us-central1 $2 -- $3
 }
 
-funciton make_public() {
+function make_public() {
  gsutil acl ch -u AllUsers:R $1
 }
