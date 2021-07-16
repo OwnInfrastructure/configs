@@ -84,5 +84,5 @@ function make_public() {
 }
 
 function gcurl() {
-  curl -H "Authorization: Bearer $(gcloud auth print-identity-token)" $@
+  curl -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" $@
 }
