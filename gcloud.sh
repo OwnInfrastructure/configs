@@ -82,3 +82,7 @@ function composer_run() {
 function make_public() {
  gsutil acl ch -u AllUsers:R $1
 }
+
+function gcurl() {
+  curl -H "Authorization: Bearer $(gcloud auth print-identity-token)" $@
+}
