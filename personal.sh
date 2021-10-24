@@ -10,3 +10,6 @@ function upload_public_tmp() {
 	make_public "${UPLOAD_REMOTE}"
 	echo "link: ${LINK}"
 }
+
+alias gcloud_auth_set_academy="gcloud auth set viacheslav@kovalevskyi.academy"
+alias gcloud_auth_set_main="gcloud auth set kovalevskyi.viacheslav@gmail.com"
