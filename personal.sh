@@ -11,5 +11,5 @@ function upload_public_tmp() {
 	echo "link: ${LINK}"
 }
 
-alias gcloud_auth_set_academy="gcloud auth set viacheslav@kovalevskyi.academy"
-alias gcloud_auth_set_main="gcloud auth set kovalevskyi.viacheslav@gmail.com"
+alias gcloud_auth_set_academy="gcloud config set account viacheslav@kovalevskyi.academy"
+alias gcloud_auth_set_main="gcloud config set account kovalevskyi.viacheslav@gmail.com"
